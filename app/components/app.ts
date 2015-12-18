@@ -1,8 +1,8 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, RouterOutlet } from 'angular2/router';
 import { SidebarComponent } from './sidebar';
-import { HomeComponent } from './home';
-import { DiscoverComponent } from './discover';
+import { HomePage } from './home';
+import { DiscoverPage } from './discover';
 
 @Component({
 	selector: 'pfm-app',
@@ -21,7 +21,7 @@ import { DiscoverComponent } from './discover';
 	directives: [SidebarComponent, RouterOutlet]
 })
 @RouteConfig([
-	{path: '/', 		name: 'Home', 		component: HomeComponent},
-	{path: '/discover', name: 'Discover', 	component: DiscoverComponent}
+	{path: '/', 		name: 'Home', 		component: HomePage},
+	{path: '/discover', name: 'Discover', 	component: DiscoverPage}
 ])
 export class AppComponent{}

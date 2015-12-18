@@ -5,4 +5,4 @@ import { Component } from 'angular2/core';
 		<h1>Discover</h1>
 	`
 })
-export class DiscoverComponent{}
+export class DiscoverPage{}
