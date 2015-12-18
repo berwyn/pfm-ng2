@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pony.fm</title>
+		<meta charset="utf-8">
+		<base href="/">
+		
+		<script src="node_modules/es6-shim/es6-shim.js"></script>
+		<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+		<script src="node_modules/systemjs/dist/system.src.js"></script>
+		<script src="node_modules/rxjs/bundles/Rx.js"></script>
+		<script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+		<script src="node_modules/angular2/bundles/router.dev.js"></script>
+		
+		<script>
+			System.config({
+				packages: {
+					app: {
+						format: 'register',
+						defaultExtension: 'js'
+					}
+				}
+			});
+			System.import('app/bootstrap')
+				.then(null, console.error.bind(console));
+		</script>
+		
+		<style>
+			* { box-sizing: border-box }
+			html, body { 
+				margin: 0; 
+				min-height: 100vh; 
+				min-width: 100vw;
+				padding: 0;
+				
+				/** Fix for BrowserSync **/
+				position: absolute;
+				top: 0;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<pfm-app>Loading...</pfm-app>
+	</body>
+</html>
