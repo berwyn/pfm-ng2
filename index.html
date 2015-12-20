@@ -27,7 +27,9 @@
 		
 		<style>
 			* { box-sizing: border-box }
+			
 			html, body { 
+				font-family: sans-serif;
 				margin: 0; 
 				min-height: 100vh; 
 				min-width: 100vw;
@@ -37,10 +39,36 @@
 				position: absolute;
 				top: 0;
 			}
+			
+			.splash-background {
+				background-color: #84528A;
+				height: 100vh;
+				text-align: center;
+				width: 100vw;
+			}
+			
+			.splash-background::before {
+				content: '';
+				display: inline-block;
+				height: 100%;
+				margin-left: -0.25em;
+				vertical-align: middle;
+			}
+			
+			.splash-logo {
+				display: inline-block;
+				margin: auto;
+				max-width: 80vw;
+				vertical-align: middle;
+			}
 		</style>
 	</head>
 	
 	<body>
-		<pfm-app>Loading...</pfm-app>
+		<pfm-app>
+			<div class="splash-background">
+				<img src="/images/logo-white.svg" alt="Pony.fm" class="splash-logo">
+			</div>
+		</pfm-app>
 	</body>
 </html>
