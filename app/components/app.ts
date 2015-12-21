@@ -10,15 +10,20 @@ import { AboutPage } from './about';
 	template: `
 		<div class="pfm-app">
 			<pfm-sidebar></pfm-sidebar>
-			<router-outlet></router-outlet>
+			<div class="content-area">
+				<router-outlet></router-outlet>
+			</div>
 		</div>
 	`,
-	styles: [`
-		.pfm-app {
+	styles: [
+		`.pfm-app {
 			display: flex;
 			flex-direction: row;
-		}
-	`],
+		}`,
+		`.content-area {
+			margin-left: 285px;,
+		}`,
+	],
 	directives: [SidebarComponent, RouterOutlet]
 })
 @RouteConfig([

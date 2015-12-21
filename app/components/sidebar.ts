@@ -19,25 +19,21 @@ import { RouterLink } from 'angular2/router';
 					<li>
 						<a class="nav-item" [routerLink]="['About']">About</a>
 					</li>
-					<li>Forum</li>
-					<li>Login</li>
-					<li>Register</li>
 				</ul>
 			</nav>
 		</div>
 	`,
 	styles: [
 		`.pfm-sidebar {
-			background-color: #84528A;
+			background-color: #515151;
 			color: rgba(255,255,255,0.7);
 			height: 100vh;
 			width: 280px;
-			position: static;
+			position: fixed;
 		}`,
 		`.pfm-sidebar .pfm-logo {
-			margin: 0 auto 16px;
+			background-color: #84528A;
 			text-align: center;
-			width: 80%;
 		}`,
 		`.pfm-sidebar .pfm-logo::before {
 			content: '';
@@ -48,6 +44,7 @@ import { RouterLink } from 'angular2/router';
 		}`,
 		`.pfm-sidebar .pfm-logo-image {
 			display: inline-block;
+			padding: 2em 1em 3em;
 			vertical-align: middle;
 			width: 100%;
 		}`,
@@ -56,9 +53,12 @@ import { RouterLink } from 'angular2/router';
 			list-style-type: none;
 			padding: 1em;
 		}`,
-		`.pfm-sidebar-navlist nav-item {
+		`.pfm-sidebar-navlist .nav-item {
 			text-decoration: none;
-		}`
+		}`,
+		`.pfm-sidebar-navlist .nav-item:visited {
+			color: rgba(255,255,255,0.7);
+		}`,
 	],
 	directives: [RouterLink]
 })
