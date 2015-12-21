@@ -35,7 +35,7 @@ import { RouterLink } from 'angular2/router';
 			position: static;
 		}`,
 		`.pfm-sidebar .pfm-logo {
-			margin: 16px auto;
+			margin: 0 auto 16px;
 			text-align: center;
 			width: 80%;
 		}`,
