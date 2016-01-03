@@ -11,13 +11,13 @@ import { RouterLink } from 'angular2/router';
 			<nav role="nav" class="pfm-sidebar-nav">
 				<ul class="pfm-sidebar-navlist">
 					<li>
-						<a class="nav-item" [routerLink]="['Home']">Home</a>
+						<a class="nav-item material-title" [routerLink]="['Home']">Home</a>
 					</li>
 					<li>
-						<a class="nav-item" [routerLink]="['Discover']">Discover</a>
+						<a class="nav-item material-title" [routerLink]="['Discover']">Discover</a>
 					</li>
 					<li>
-						<a class="nav-item" [routerLink]="['About']">About</a>
+						<a class="nav-item material-title" [routerLink]="['About']">About</a>
 					</li>
 				</ul>
 			</nav>
@@ -26,7 +26,7 @@ import { RouterLink } from 'angular2/router';
 	styles: [
 		`.pfm-sidebar {
 			background-color: #515151;
-			color: rgba(255,255,255,0.7);
+			color: rgba(255,255,255,0.87);
 			height: 100vh;
 			width: 280px;
 			position: fixed;
@@ -57,7 +57,7 @@ import { RouterLink } from 'angular2/router';
 			text-decoration: none;
 		}`,
 		`.pfm-sidebar-navlist .nav-item:visited {
-			color: rgba(255,255,255,0.7);
+			color: rgba(255,255,255,0.87);
 		}`,
 	],
 	directives: [RouterLink]
