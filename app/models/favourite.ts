@@ -4,10 +4,10 @@ import { Album } from './album';
 import { Playlist } from './playlist';
 
 export class Favourite{
-    
-    user: User;
-    track: Track;
-    album: Album;
-    playlist: Playlist;
-    
+	
+	user: User;
+	track: Track;
+	album: Album;
+	playlist: Playlist;
+	
 }
