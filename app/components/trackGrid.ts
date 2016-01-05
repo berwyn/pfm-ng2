@@ -7,7 +7,7 @@ import { Track } from '../models/track';
 	selector: 'pfm-track-grid',
 	template: `
 		<div class="pfm-track-grid">
-			<pfm-card *ngFor="#track of tracks" [title]="track.title">
+			<pfm-card *ngFor="#track of tracks" [title]="track.title" inline="true" width="200px">
 				<img image [src]="loadCover(track)" />
 			</pfm-card>
 		</div>

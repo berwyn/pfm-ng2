@@ -17,8 +17,16 @@ export class HomePage {
 	
 	constructor() {
 		this.tracks = [
-			<Track>{title: 'track1', stats:{ plays: 2 }},
-			<Track>{title: 'track2', stats:{ plays: 3 }}
+			<Track>{title: 'track1', stats:{ plays: 31 }},
+			<Track>{title: 'track2', stats:{ plays: 31 }},
+			<Track>{title: 'track3', stats:{ plays: 31 }},
+			<Track>{title: 'track4', stats:{ plays: 31 }},
+			<Track>{title: 'track5', stats:{ plays: 31 }},
+			<Track>{title: 'track6', stats:{ plays: 31 }},
+			<Track>{title: 'track7', stats:{ plays: 31 }},
+			<Track>{title: 'track8', stats:{ plays: 31 }},
+			<Track>{title: 'track9', stats:{ plays: 31 }},
+			<Track>{title: 'track10', stats:{ plays: 31 }},
 		];
 	}
 	
