@@ -1,5 +1,5 @@
 import { Component, Input } from 'angular2/core';
-import { NgFor }  from 'angular2/common';
+import { NgFor, NgIf }  from 'angular2/common';
 
 export enum TabType {
 	Standard,
@@ -9,14 +9,14 @@ export enum TabType {
 @Component({
 	selector: 'pfm-tabs',
 	template: `
-		<ul>
+		<ul class="pfm-tabs" [style]="{{type | lowercase}}">
 			<li *ngFor="#tab of tabs" (click)="selectTab(tab)">
 				{{ tab.title }}
 			</li>
 		</ul>
-		<ng-content></ng-content>
+		<ng-content *ngIf="shouldShowContent()"></ng-content>
 	`,
-	directives: [NgFor]
+	directives: [NgFor, NgIf]
 })
 export class TabsComponent {
 	
@@ -33,6 +33,10 @@ export class TabsComponent {
 	
 	selectTab(tab: TabComponent) {
 		this.tabs.forEach(t => t.active = (t === tab))
+	}
+	
+	shouldShowContent(): boolean {
+		return this.type === TabType.Standard;
 	}
 }
 

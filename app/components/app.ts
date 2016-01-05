@@ -19,9 +19,16 @@ import { AboutPage } from './about';
 		`.pfm-app {
 			display: flex;
 			flex-direction: row;
-		}`,
-		`.content-area {
+		}
+		
+		.content-area {
 			margin-left: 285px;,
+		}
+		
+		@media screen and (max-width: 900px) {
+			.content-area {
+				margin-left: 48px;
+			}
 		}`,
 	],
 	directives: [SidebarComponent, RouterOutlet]
