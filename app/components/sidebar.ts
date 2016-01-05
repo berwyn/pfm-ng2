@@ -1,5 +1,6 @@
 import { Component } from 'angular2/core';
 import { RouterLink } from 'angular2/router';
+import { NgFor } from 'angular2/common';
 
 @Component({
 	selector: 'pfm-sidebar',
@@ -11,22 +12,10 @@ import { RouterLink } from 'angular2/router';
 			</div>
 			<nav role="nav" class="pfm-sidebar-nav">
 				<ul class="pfm-sidebar-navlist">
-					<li>
-						<a class="nav-item" [routerLink]="['Home']">
-							<i class="material-icons nav-icon">home</i>
-							<span class="material-title nav-text">Home</span>
-						</a>
-					</li>
-					<li>
-						<a class="nav-item" [routerLink]="['Discover']">
-							<i class="material-icons nav-icon">library_music</i>
-							<span class="material-title nav-text">Discover</span>
-						</a>
-					</li>
-					<li>
-						<a class="nav-item" [routerLink]="['About']">
-							<i class="material-icons nav-icon">info</i>
-							<span class="material-title nav-text">About</span>
+					<li *ngFor="#nav of navItems">
+						<a class="nav-item" [routerLink]="[nav.routerLink]">
+							<i class="material-icons nav-icon">{{ nav.icon }}</i>
+							<span class="material-title nav-text">{{ nav.title }}</span>
 						</a>
 					</li>
 				</ul>
@@ -93,6 +82,10 @@ import { RouterLink } from 'angular2/router';
 			vertical-align: middle;
 		}
 		
+		.pfm-sidebar-navlist .nav-item.router-link-active {
+			color: #84528A;
+		}
+		
 		.pfm-sidebar-navlist .nav-icon {
 			height: 32px;
 			font-size: 32px;
@@ -133,6 +126,14 @@ import { RouterLink } from 'angular2/router';
 			}
 		}`,
 	],
-	directives: [RouterLink]
+	directives: [RouterLink, NgFor]
 })
-export class SidebarComponent{}
+export class SidebarComponent{
+
+	navItems: any[] = [
+		{ title: 'Home', icon: 'home', routerLink: 'Home' },
+		{ title: 'Discover', icon: 'library_music', routerLink: 'Discover' },
+		{ title: 'About', icon: 'info', routerLink: 'About' },
+	];
+
+}

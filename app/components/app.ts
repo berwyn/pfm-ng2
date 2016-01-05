@@ -22,7 +22,7 @@ import { AboutPage } from './about';
 		}
 		
 		.content-area {
-			margin-left: 285px;,
+			margin-left: 285px;
 		}
 		
 		@media screen and (max-width: 900px) {
