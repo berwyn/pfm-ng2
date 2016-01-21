@@ -9,6 +9,12 @@ import { Track } from '../models/track';
 		<div class="pfm-track-grid">
 			<pfm-card *ngFor="#track of tracks" [title]="track.title" inline="true" width="200px">
 				<img image [src]="loadCover(track)" />
+				<span overlay>
+					<i class="material-icons">favorite</i>
+					{{ track.stats.favourites }}
+					<i class="material-icons">file_download</i>
+					{{ track.stats.downloads }}
+				</span>
 			</pfm-card>
 		</div>
 	`,
