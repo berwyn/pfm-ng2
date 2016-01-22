@@ -1,5 +1,5 @@
 import { Component } from 'angular2/core';
-import { TrackGridComponent } from './trackGrid';
+import { TrackGridComponent } from '../components/trackGrid';
 import { Track } from '../models/track';
 import { TrackStore } from '../stores/track';
 

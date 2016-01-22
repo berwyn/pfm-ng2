@@ -1,7 +1,7 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, RouterOutlet } from 'angular2/router';
 import { SidebarComponent } from './sidebar';
-import { HomePage } from './home';
+import { HomePage } from '../pages/home';
 import { DiscoverPage } from './discover';
 import { AboutPage } from './about';
 
