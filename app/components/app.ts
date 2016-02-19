@@ -34,8 +34,8 @@ import { AboutPage } from './about';
 	directives: [SidebarComponent, RouterOutlet]
 })
 @RouteConfig([
-	{path: '/', 		name: 'Home', 		component: HomePage},
-	{path: '/discover', name: 'Discover', 	component: DiscoverPage},
-	{path: '/about',	name: 'About',		component: AboutPage},
+	{path: '/', 			name: 'Home', 		component: HomePage},
+	{path: '/discover/...', name: 'Discover', 	component: DiscoverPage},
+	{path: '/about',		name: 'About',		component: AboutPage},
 ])
 export class AppComponent{}
