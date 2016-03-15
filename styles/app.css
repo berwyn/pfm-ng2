@@ -63,6 +63,8 @@ body { background-color: #fafafa }
 .material-body1 { font-size: 13px }
 .material-caption { font-size: 12px }
 
+.material-primary { color: #b885bd }
+
 @media screen and (max-width: 900) {
     .material-subheading { font-size: 16px }
     .material-body2 { font-size: 14px }
