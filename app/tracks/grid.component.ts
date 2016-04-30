@@ -1,13 +1,12 @@
 import { Component, Optional, Input } from 'angular2/core';
 import { NgFor } from 'angular2/common';
-import { PfmCard } from './card';
-import { Track } from '../models/track';
+import { Track } from './track.model';
 
 @Component({
 	selector: 'pfm-track-grid',
 	template: `
 		<div class="pfm-track-grid">
-			<h5 class="material-primary material-display-1">{{ title }}</h5>
+			<h1 class="material-primary material-display-1">{{ title }}</h1>
 			<pfm-card *ngFor="#track of tracks" [title]="track.title" inline="true" width="200px">
 				<img image [src]="loadCover(track)" />
 				<span overlay>
@@ -41,16 +40,12 @@ import { Track } from '../models/track';
 			vertical-align: middle;
 		}
 	`],
-	directives: [NgFor, PfmCard]
+	directives: [NgFor]
 })
 export class TrackGridComponent{
 	
 	@Input() tracks: Track[];
 	@Input() title: String;
-	
-	constructor() {
-		console.log(this.title);
-	}
 	
 	loadCover(track: Track): string {
 		if(track.covers && track.covers.small) { return track.covers.small }

@@ -1,5 +1,5 @@
-import { User } from './user';
-import { CoverSet } from './image';
+import { User } from '../users/user.model';
+import { CoverSet } from '../common/image.model';
 
 export class Track{
 	

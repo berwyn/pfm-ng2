@@ -1,8 +1,8 @@
 import { Component } from 'angular2/core';
 import { NgFor } from 'angular2/common';
-import { TrackGridComponent } from '../components/trackGrid';
-import { Track } from '../models/track';
-import { TrackStore } from '../stores/track';
+import { TrackGridComponent } from '../tracks/grid.component';
+import { Track } from '../tracks/track.model';
+import { TrackStore } from '../tracks/track.store';
 
 @Component({
 	template: `

@@ -1,7 +1,7 @@
-import { Track } from '../models/track';
+import { Track } from './track.model';
 
 export class TrackStore {
-    
+
 	private trackStore: Track[] = [];
 	
 	constructor() {
@@ -17,10 +17,10 @@ export class TrackStore {
 		}
 	}
 	
-    getLatest(): Track[] {
-        return this.trackStore
+	getLatest(): Track[] {
+		return this.trackStore
 			.sort(() => (Math.random() * -2) + 1)
 			.slice(0, 19);
-    }
-    
+	}
+
 }

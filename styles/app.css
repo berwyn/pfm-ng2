@@ -1,4 +1,7 @@
-body { background-color: #fafafa }
+body { 
+    background-color: #fafafa;
+    min-width: 320px;
+}
 
 /**
  * MATERIAL ELEVATION

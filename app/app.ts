@@ -1,9 +1,9 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, RouterOutlet } from 'angular2/router';
-import { SidebarComponent } from './sidebar';
-import { HomePage } from '../pages/home';
-import { DiscoverPage } from './discover';
-import { AboutPage } from './about';
+import { SidebarComponent } from './navigation/sidebar.component';
+import { HomePage } from './core/home.component';
+import { DiscoverPage } from './core/discover.component';
+import { AboutPage } from './core/about.component';
 
 @Component({
 	selector: 'pfm-app',
