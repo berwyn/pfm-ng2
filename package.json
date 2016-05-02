@@ -10,7 +10,8 @@
     "build:w": "tsc -w",
     "lite": "lite-server",
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
-    "clean": "rimraf app/*.js app/*.js.map app/**/*.js* app/**/*.js.map"
+    "clean": "rimraf app/*.js app/*.js.map app/**/*.js* app/**/*.js.map",
+    "update": "npm install && typings install"
   },
   "author": "berwyn <berwyn.codeweaver@gmail.com>",
   "license": "MIT",

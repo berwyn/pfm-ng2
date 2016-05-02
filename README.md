@@ -4,28 +4,20 @@ This is a proof-of-concept of [Pony.fm](https://github.com/Poniverse/Pony.fm) re
 
 This does not represent a fully working application at this point, but could be adapted into one.
 
-### Running
-```bash
-$ npm run start
-```
-- Runs `TypeScript`'s compiler in watch mode
-- Boots `lite-server`
-- Starts `browser-sync`
-- Opens the page in the default browser
+### Setting Up
+Installs npm dependencies, typings, builds the code, and starts a minimal
+http server with browsersync to host the site
 
 ```bash
-$ npm run tsc
+git clone git+ssh://git@github.com/berwyn/pfm-ng2
+cd pfm-ng2
+npm run update
+npm run start
 ```
-- Runs `TypeScript`'s compiler
+
+### Testing
+Runs Karma on our Jasmine tests, now with 20% more nyan
 
 ```bash
-$ npm run tsc:w
+npm test
 ```
-- Runs `TypeScript`'s compiler in watch mode
-
-```bash
-$ npm run lite
-```
-- Boots `lite-server`
-- Starts `browser-sync`
-- Opens the page in the default browser
