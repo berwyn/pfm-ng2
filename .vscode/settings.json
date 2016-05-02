@@ -1,9 +1,11 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-	"editor.detectIndentation": true,
-	"files.exclude": {
-		"**/.git": true,
-		"**/.DS_Store": true,
-		"app/**/*.js*": true
-	}
+    "editor.detectIndentation": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "app/**/*.js*": true,
+        ".vscode/.browse.VC*": true,
+        ".config/system.config.js*": true
+    }
 }

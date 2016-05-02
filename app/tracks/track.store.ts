@@ -1,5 +1,9 @@
+import { Injectable } from 'angular2/core';
+import { Observable } from 'rxjs/Observable';
+import { Observer } from 'rxjs/Observer';
 import { Track } from './track.model';
 
+@Injectable()
 export class TrackStore {
 
 	private trackStore: Track[] = [];
@@ -17,10 +21,13 @@ export class TrackStore {
 		}
 	}
 	
-	getLatest(): Track[] {
-		return this.trackStore
-			.sort(() => (Math.random() * -2) + 1)
-			.slice(0, 19);
+	getLatest(): Observable<Track[]> {
+		return Observable.create((observer: Observer<Track[]>)  => {
+			let tracks = this.trackStore
+				.sort(() => (Math.random() * -2) + 1)
+				.slice(0, 10);
+			observer.next(tracks);
+		});
 	}
 
 }

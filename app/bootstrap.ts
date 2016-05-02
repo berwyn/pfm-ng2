@@ -4,6 +4,5 @@ import {AppComponent} from './app';
 import {TrackStore} from './tracks/track.store';
 
 bootstrap(AppComponent, [
-	ROUTER_PROVIDERS,
-	TrackStore
+	ROUTER_PROVIDERS
 ]);

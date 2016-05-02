@@ -3,3 +3,5 @@ node_modules/
 *.js.map
 .vscode/.browse*
 typings/
+.coverage/
+.config/system.config.js

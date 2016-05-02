@@ -19,11 +19,11 @@ export class HomePage {
 	grids = [];
 	
 	constructor(store: TrackStore) {
-		this.tracks = store.getLatest();
 		this.grids = [
 			{ tracks: this.tracks, title: 'hot' },
 			{ tracks: this.tracks, title: 'trending' }
 		];
+		store.getLatest().subscribe(tracks => this.tracks = tracks);
 	}
 	
 }

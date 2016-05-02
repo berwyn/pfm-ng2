@@ -1,9 +1,12 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, RouterOutlet } from 'angular2/router';
+
 import { SidebarComponent } from './navigation/sidebar.component';
 import { HomePage } from './core/home.component';
 import { DiscoverPage } from './core/discover.component';
 import { AboutPage } from './core/about.component';
+
+import { TrackStore } from './tracks/track.store';
 
 @Component({
 	selector: 'pfm-app',
@@ -31,7 +34,8 @@ import { AboutPage } from './core/about.component';
 			}
 		}`,
 	],
-	directives: [SidebarComponent, RouterOutlet]
+	directives: [SidebarComponent, RouterOutlet],
+	providers: [TrackStore]
 })
 @RouteConfig([
 	{path: '/', 			name: 'Home', 		component: HomePage},
