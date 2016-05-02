@@ -29,5 +29,32 @@ export const EXPECTED_TRACKS: Track[] = [
 		user: {
 			
 		},
+	},
+	{
+		title: 'Test Track 2',
+		is_downloadable: false,
+		is_explicit: false,
+		is_published: true,
+		is_vocal: true,
+		url: '/track/1792b2ff-9e69-4629-8824-12ac4ff9c64b',
+		covers: {
+			normal: '/track/1792b2ff-9e69-4629-8824-12ac4ff9c64b/cover/normal.png',
+			original: '/track/1792b2ff-9e69-4629-8824-12ac4ff9c64b/cover/original.png',
+		},
+		stats: {
+			views: 43,
+			plays: 45,
+			downloads: 0,
+			comments: 3,
+			favourites: 5,
+		},
+		streams: {
+			mp3: '/track/1792b2ff-9e69-4629-8824-12ac4ff9c64b/stream/mp3',
+			aac: '/track/1792b2ff-9e69-4629-8824-12ac4ff9c64b/stream/aac',
+			ogg: '/track/1792b2ff-9e69-4629-8824-12ac4ff9c64b/stream/ogg',
+		},
+		user: {
+			
+		},
 	}
 ]
