@@ -1,4 +1,5 @@
-import { inject, TestComponentBuilder } from 'angular2/testing';
+import { inject } from '@angular/core/testing';
+import { TestComponentBuilder } from '@angular/compiler/testing';
 import { AppComponent } from './app';
 
 describe('App', () => {

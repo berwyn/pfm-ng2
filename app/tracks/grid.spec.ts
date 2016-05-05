@@ -1,5 +1,6 @@
-import { TestComponentBuilder, ComponentFixture, async, inject } from 'angular2/testing';
-import { TrackGridComponent } from './grid.component';
+import { async, inject } from '@angular/core/testing';
+import { TestComponentBuilder, ComponentFixture } from '@angular/compiler/testing';
+import { TrackGridComponent as Component } from './grid.component';
 import { Track } from './track.model';
 import { EXPECTED_TRACKS } from './track.spec';
 
@@ -10,15 +11,15 @@ describe('Track Grid', () => {
 	describe('artwork loading', () => {
 
 		it('should select artwork urls that exist', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-			return tcb.createAsync(TrackGridComponent).then((fixture: ComponentFixture) => {
-				const comp = fixture.componentInstance as TrackGridComponent;
+			return tcb.createAsync(Component).then((fixture: ComponentFixture<Component>) => {
+				const comp = fixture.componentRef.instance;
 				expect(comp.loadCover(coverTrack)).toBe('/track/dbbc791c-7361-414a-8399-d89e548ed7e6/cover/small.png');
 			});
 		}) as () => void);
 
 		it('should provide default URLs', inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-			return tcb.createAsync(TrackGridComponent).then((fixture: ComponentFixture) => {
-				const comp = fixture.componentInstance as TrackGridComponent;
+			return tcb.createAsync(Component).then((fixture: ComponentFixture<Component>) => {
+				const comp = fixture.componentRef.instance;
 				expect(comp.loadCover(noCoverTrack)).toBe('/images/logo-white.svg');
 			});
 		}) as () => void);
@@ -26,7 +27,7 @@ describe('Track Grid', () => {
 	});
 
 	it('should load tracks', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-		return tcb.createAsync(TrackGridComponent).then((fixture: ComponentFixture) => {
+		return tcb.createAsync(Component).then((fixture: ComponentFixture<Component>) => {
 			const element = fixture.nativeElement as HTMLElement;
 			// TODO: Test this
 		});

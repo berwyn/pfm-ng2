@@ -1,5 +1,5 @@
-import { Component } from 'angular2/core';
-import { NgFor } from 'angular2/common';
+import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
 import { TrackGridComponent } from '../tracks/grid.component';
 import { Track } from '../tracks/track.model';
 import { TrackStore } from '../tracks/track.store';

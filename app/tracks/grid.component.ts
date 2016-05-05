@@ -1,5 +1,5 @@
-import { Component, Input } from 'angular2/core';
-import { NgFor, NgIf } from 'angular2/common';
+import { Component, Input } from '@angular/core';
+import { NgFor, NgIf } from '@angular/common';
 import { Track } from './track.model';
 
 @Component({

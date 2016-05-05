@@ -1,6 +1,6 @@
-import { Component } from 'angular2/core';
-import { RouterLink } from 'angular2/router';
-import { NgFor } from 'angular2/common';
+import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router-deprecated';
+import { NgFor } from '@angular/common';
 
 @Component({
 	selector: 'pfm-sidebar',
