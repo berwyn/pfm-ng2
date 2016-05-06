@@ -12,7 +12,7 @@ import { NgFor } from '@angular/common';
 			</div>
 			<nav role="nav" class="pfm-sidebar-nav">
 				<ul class="pfm-sidebar-navlist">
-					<li *ngFor="#nav of navItems">
+					<li *ngFor="let nav of navItems">
 						<a class="nav-item" [routerLink]="[nav.routerLink]">
 							<i class="material-icons nav-icon">{{ nav.icon }}</i>
 							<span class="material-title nav-text">{{ nav.title }}</span>

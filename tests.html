@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Pony.fm Tests</title>
+	<link rel="stylesheet" href="../node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
+	<script src="../node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+	<script src="../node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+	<script src="../node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+	<script src="node_modules/zone.js/dist/zone.js"></script>
+	<script src="node_modules/reflect-metadata/Reflect.js"></script>
+	<script src="node_modules/systemjs/dist/system.src.js"></script>
+	<script>
+		var map = {
+			'app': 'app/',
+			'rxjs': 'node_modules/rxjs',
+			'@angular': 'node_modules/@angular',
+		};
+		
+		var packages = {
+			'app': {
+				format: 'register',
+				defaultExtension: 'js'
+			},
+			'rxjs': { defaultExtension: 'js' },
+		}
+		
+		var names = [
+			'@angular/common',
+			'@angular/compiler',
+			'@angular/core',
+			'@angular/http',
+			'@angular/platform-browser',
+			'@angular/platform-browser-dynamic',
+			'@angular/router-deprecated',
+			'@angular/testing',
+			'@angular/upgrade'
+		];
+		names.forEach(pkgName => packages[pkgName] = { main: 'index.js', defaultExtension: 'js' });
+		
+		System.config({ packages, map });
+		Promise.all([
+			System.import('app/app.spec'),
+			System.import('app/core/home.spec'),
+			System.import('app/tracks/card.spec'),
+			System.import('app/tracks/grid.spec'),
+		])
+		.then(window.onload)
+		.catch(console.error.bind(console));
+	</script>
+</head>
+
+<body>
+	<!-- TODO: Move into Karma, don't use an HTML file for this -->'
+</body>
+
+</html>

@@ -29,5 +29,14 @@ export class TrackStore {
 			observer.next(tracks);
 		});
 	}
+	
+	getHot(): Observable<Track[]> {
+		return Observable.create((observer: Observer<Track[]>)  => {
+			let tracks = this.trackStore
+				.sort(() => (Math.random() * -2) + 1)
+				.slice(0, 10);
+			observer.next(tracks);
+		});
+	}
 
 }

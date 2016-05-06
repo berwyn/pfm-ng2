@@ -1,29 +1,13 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { TrackGridComponent } from '../tracks/grid.component';
-import { Track } from '../tracks/track.model';
-import { TrackStore } from '../tracks/track.store';
+import { TrackGridComponent, Categories } from '../tracks/grid.component';
 
 @Component({
 	template: `
-		<div>
-			<pfm-track-grid *ngFor="#grid of grids" [tracks]="grid.tracks" [title]="grid.title">
-			</pfm-track-grid>
+		<div class="home-comp">
+			<pfm-track-grid title="Hot" [max]="25" [category]="${Categories.Hot}"></pfm-track-grid>
 		</div>
 	`,
 	directives: [NgFor, TrackGridComponent]
 })
-export class HomePage {
-	
-	tracks: Track[];
-	grids = [];
-	
-	constructor(store: TrackStore) {
-		this.grids = [
-			{ tracks: this.tracks, title: 'hot' },
-			{ tracks: this.tracks, title: 'trending' }
-		];
-		store.getLatest().subscribe(tracks => this.tracks = tracks);
-	}
-	
-}
+export class HomePage {}

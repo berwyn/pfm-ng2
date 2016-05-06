@@ -9,7 +9,7 @@ describe('Track Card', () => {
 	let [ track ] = EXPECTED_TRACKS;
 
 	it('should render a track', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-		return tcb.createAsync(Component).then((fixture: ComponentFixture<Component>) => {
+		tcb.createAsync(Component).then((fixture: ComponentFixture<Component>) => {
 			const element = fixture.nativeElement as HTMLElement;
 			const img = element.querySelector('.qa-cover') as HTMLImageElement;
 			const title = element.querySelector('.qa-title') as HTMLSpanElement;

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Track } from './track.model';
 
 @Component({
@@ -6,15 +6,19 @@ import { Track } from './track.model';
 	template: `
 		<div class="card">
 			<img class="cover-art" [src]="track.covers.normal" />
-			<div class="">
+			<div>
 				<span>{{ track.title }}</span>
 				<span>{{ track.artist }}</span>
 			</div>
 		</div>
 	`
 })
-export class TrackCardComponent {
+export class TrackCardComponent implements OnInit {
 	
 	@Input() track: Track;
+	
+	ngOnInit() {
+		console.log(this.track);
+	}
 	
 }
