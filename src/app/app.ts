@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteConfig, RouterOutlet } from '@angular/router-deprecated';
+import { RouteConfig, RouterOutlet, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 import { SidebarComponent } from './navigation/sidebar.component';
 import { HomePage } from './core/home.component';
@@ -35,7 +35,7 @@ import { TrackStore } from './tracks/track.store';
 		}`,
 	],
 	directives: [SidebarComponent, RouterOutlet],
-	providers: [TrackStore]
+	providers: [TrackStore, ROUTER_PROVIDERS]
 })
 @RouteConfig([
 	{path: '/', 			name: 'Home', 		component: HomePage},
