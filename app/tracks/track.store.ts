@@ -12,6 +12,9 @@ export class TrackStore {
 		for(let i = 0; i < 100; i++) {
 			this.trackStore.push({
 				title: `track${i}`,
+				user: {
+					name: `${this.stupidArtistName(i)} Element`
+				},
 				stats: {
 					plays: (Math.random() * 100 | 0),
 					favourites: (Math.random() * 100 | 0),
@@ -37,6 +40,18 @@ export class TrackStore {
 				.slice(0, 10);
 			observer.next(tracks);
 		});
+	}
+	
+	private stupidArtistName(idx: number): string {
+		if(/1$/.test(idx.toString())) {
+			return `${idx}st`;
+		} else if(/2$/.test(idx.toString())) {
+			return `${idx}nd`;
+		} else if(/3$/.test(idx.toString())) {
+			return `${idx}rd`;
+		} else {
+			return `${idx}th`;
+		}
 	}
 
 }

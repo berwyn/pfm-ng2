@@ -1,7 +1,7 @@
 import { User } from '../users/user.model';
 import { CoverSet } from '../common/image.model';
 
-export class Track{
+export interface Track{
 	
 	title: string;
 	user: User;
@@ -26,4 +26,4 @@ export class Track{
 	
 }
 
-export class TrackFile{}
+export interface TrackFile{}

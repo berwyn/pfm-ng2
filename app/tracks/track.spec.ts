@@ -27,7 +27,7 @@ export const EXPECTED_TRACKS: Track[] = [
 			ogg: '/track/dbbc791c-7361-414a-8399-d89e548ed7e6/stream/ogg',
 		},
 		user: {
-			
+			name: 'aa1cf592-03df-4575-acea-130ec076cb95',
 		},
 	},
 	{
@@ -56,7 +56,7 @@ export const EXPECTED_TRACKS: Track[] = [
 			ogg: '/track/1792b2ff-9e69-4629-8824-12ac4ff9c64b/stream/ogg',
 		},
 		user: {
-			
+			name: 'c066cef1-baa5-4814-bea8-65289d7b95c3',
 		},
 	}
 ]

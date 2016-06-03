@@ -1,6 +1,6 @@
-export class Image{}
+export interface Image{}
 
-export class CoverSet {
+export interface CoverSet {
 
 	thumbnail: string;
 	small: string;

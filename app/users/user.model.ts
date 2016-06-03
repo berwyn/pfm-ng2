@@ -1,2 +1,7 @@
-export class User{}
-export class ResourceUser{}
+export interface User {
+	name: string;
+}
+
+export interface ResourceUser {
+	
+}

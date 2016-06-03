@@ -7,16 +7,31 @@ import { TrackStore } from './track.store';
 @Component({
 	selector: 'pfm-track-grid',
 	template: `
-		<div>
-			<span class="title">{{ title }}</span>
+		<div class="header">
+			<h3 class="title">{{ title }}</h3>
 			<button role="button" *ngIf="tracks?.length > max">More</button>
 		</div>
 		<ul class="track-list">
-			<li *ngFor="let track of tracks">
+			<li class="list-item" *ngFor="let track of tracks">
 				<pfm-track-card [track]="track"></pfm-track-card>
 			</li>
 		</ul>
 	`,
+	styles: [`
+		.header {
+			margin: 8px;
+		}
+		
+		.track-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.track-list > .list-item {
+			margin: 8px;
+		}
+	`],
 	directives: [NgFor, NgIf, TrackCardComponent]
 })
 export class TrackGridComponent implements OnInit {
@@ -25,7 +40,7 @@ export class TrackGridComponent implements OnInit {
 	@Input() title: string;
 	@Input() max: number;
 	
-	tracks: Track[];
+	private tracks: Track[];
 	
 	constructor(private _store: TrackStore) {}
 	

@@ -1,24 +1,49 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Inject, Input, OnInit } from '@angular/core';
 import { Track } from './track.model';
 
 @Component({
 	selector: 'pfm-track-card',
 	template: `
 		<div class="card">
-			<img class="cover-art" [src]="track.covers.normal" />
-			<div>
-				<span>{{ track.title }}</span>
-				<span>{{ track.artist }}</span>
+			<img class="cover-art" [src]="loadArtwork()" />
+			<div class="card-text">
+				<div class="title">{{ track.title }}</div>
+				<div class="artist">{{ track.user?.name }}</div>
 			</div>
 		</div>
-	`
+	`,
+	styles: [`
+		.card {
+			background-color: white;
+			border-radius: 2px;
+			display: flex;
+			flex-direction: row;
+		}
+		
+		.cover-art {
+			background: #E8E8E8;
+			height: 96px;
+			width: 96px;
+		}
+		
+		.card-text {
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			margin: 8px;
+		}
+	`]
 })
-export class TrackCardComponent implements OnInit {
+export class TrackCardComponent {
 	
 	@Input() track: Track;
 	
-	ngOnInit() {
-		console.log(this.track);
+	private loadArtwork(): string {
+		if(this.track.covers && this.track.covers.normal) {
+			return this.track.covers.normal;
+		} else {
+			return '/images/logo-white.svg';
+		}
 	}
 	
 }
