@@ -1,4 +1,12 @@
+import {
+	beforeEach,
+	beforeEachProviders,
+	describe,
+	inject,
+	it,
+} from '@angular/core/testing';
 import { Track } from './track.model';
+import { TrackStore } from './track.store';
 
 export const EXPECTED_TRACKS: Track[] = [
 	{
@@ -60,3 +68,20 @@ export const EXPECTED_TRACKS: Track[] = [
 		},
 	}
 ]
+
+describe('Track Store', () => {
+	let store: TrackStore;
+
+	beforeEachProviders(() => [TrackStore]);
+
+	beforeEach(inject([TrackStore], (_store: TrackStore) => {
+		store = _store;
+	}));
+
+	it('should provide the latest tracks', (done: any) => {
+		let latest = store.getLatest();
+		expect(latest).not.toEqual(null);
+		done();
+	});
+
+});
