@@ -1,8 +1,8 @@
 node_modules/
-*.js
-*.js.map
+app/**/*.js
+app/**/*.js.map
 .vscode/.browse*
 typings/
 .coverage/
-.config/system.config.js
+.config/system.config.js*
 dist/

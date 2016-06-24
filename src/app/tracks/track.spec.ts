@@ -80,8 +80,40 @@ describe('Track Store', () => {
 
 	it('should provide the latest tracks', (done: any) => {
 		let latest = store.getLatest();
-		expect(latest).not.toEqual(null);
-		done();
+		expect(latest).not.toBeNull();
+
+		latest.subscribe(tracks => {
+			expect(tracks).not.toBeNull();
+			expect(tracks.length).toBe(10);
+
+			/**
+			 * Right now, data is randomly generated.
+			 * At some point, data should be injectable
+			 * and this should test that data is appropriately
+			 * supplied
+			 */
+
+			done();
+		})
+	});
+
+	it('should provide hot tracks', (done: any) => {
+		let hot = store.getHot();
+		expect(hot).not.toBeNull();
+
+		hot.subscribe(tracks => {
+			expect(tracks).not.toBeNull();
+			expect(tracks.length).toBe(10);
+
+			/**
+			 * Right now, data is randomly generated.
+			 * At some point, data should be injectable
+			 * and this should test that data is appropriately
+			 * supplied
+			 */
+
+			done();
+		});
 	});
 
 });
