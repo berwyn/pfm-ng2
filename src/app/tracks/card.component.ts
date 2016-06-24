@@ -5,10 +5,10 @@ import { Track } from './track.model';
 	selector: 'pfm-track-card',
 	template: `
 		<div class="card">
-			<img class="cover-art" [src]="loadArtwork()" />
+			<img class="cover-art qa-cover" [src]="loadArtwork()" />
 			<div class="card-text">
-				<div class="title">{{ track.title }}</div>
-				<div class="artist">{{ track.user?.name }}</div>
+				<div class="title qa-title">{{ track.title }}</div>
+				<div class="artist qa-artist">{{ track.user?.name }}</div>
 			</div>
 		</div>
 	`,

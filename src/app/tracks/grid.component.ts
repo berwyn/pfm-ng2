@@ -35,17 +35,17 @@ import { TrackStore } from './track.store';
 	directives: [NgFor, NgIf, TrackCardComponent]
 })
 export class TrackGridComponent implements OnInit {
-	
+
 	@Input() category: Categories;
 	@Input() title: string;
 	@Input() max: number;
-	
+
 	private tracks: Track[];
-	
-	constructor(private _store: TrackStore) {}
-	
+
+	constructor(private _store: TrackStore) { }
+
 	ngOnInit() {
-		switch(this.category) {
+		switch (this.category) {
 			case Categories.Hot:
 				this._store.getHot().subscribe(tracks => this.tracks = tracks);
 				break;
@@ -54,15 +54,6 @@ export class TrackGridComponent implements OnInit {
 				break;
 		}
 	}
-	
-	loadCover(track: Track): string {
-		if(track.covers && track.covers.small) {
-			return track.covers.small
-		} else {
-			return '/images/logo-white.svg'
-		}
-	}
-	
 }
 
 export enum Categories {

@@ -11,16 +11,6 @@ describe('Track Grid', () => {
 
 	beforeEach(() => component = new Component(new TrackStore()));
 
-	describe('artwork loading', () => {
-		it('should select artwork urls that exist', () => {
-			expect(component.loadCover(coverTrack)).toBe('/track/dbbc791c-7361-414a-8399-d89e548ed7e6/cover/small.png');
-		});
-
-		it('should provide default URLs', () => {
-			expect(component.loadCover(noCoverTrack)).toBe('/images/logo-white.svg');
-		});
-	});
-
 	it('should load tracks', () => {
 		expect(true).toBe(true);
 	});

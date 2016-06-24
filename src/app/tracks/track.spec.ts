@@ -46,8 +46,8 @@ export const EXPECTED_TRACKS: Track[] = [
 		is_vocal: true,
 		url: '/track/1792b2ff-9e69-4629-8824-12ac4ff9c64b',
 		covers: {
-			normal: '/track/1792b2ff-9e69-4629-8824-12ac4ff9c64b/cover/normal.png',
-			original: '/track/1792b2ff-9e69-4629-8824-12ac4ff9c64b/cover/original.png',
+			normal: null,
+			original: null,
 			thumbnail: null,
 			small: null,
 		},

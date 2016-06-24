@@ -5,3 +5,4 @@ node_modules/
 typings/
 .coverage/
 .config/system.config.js
+dist/

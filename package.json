@@ -4,20 +4,16 @@
   "description": "A proof-of-concept Pony.fm implementation",
   "repository": "berwyn/pfm-ng2",
   "scripts": {
-    "pretest": "npm run build",
-    "test": "concurrently \"tsc -w\" \"karma start ./.config/karma.conf.js --single-run --browsers PhantomJS\"",
-    "test:w": "karma start",
-    "build": "tsc",
-    "build:w": "tsc -w",
     "postinstall": "typings install",
-    "lite": "lite-server",
+    "build": "rimraf dist && webpack --config .config/webpack.prod.js --progress --profile --bail",
+
     "lint": "tslint ./app/**/*.ts -t verbose",
-    "start": "tsc && concurrently \"npm run build:w\" \"npm run lite\" ",
     "clean": "rimraf js.map app/**/*.js*",
     "update": "npm install && typings install",
-    "start:new": "webpack-dev-server --config .config/webpack.dev.js --inline --progress --port 8080",
-    "build:new": "rimraf dist && webpack --config .config/webpack.prod.js --progress --profile --bail",
-    "test:new": "karma start --config .config/karma.conf.js"
+    "start": "webpack-dev-server --config .config/webpack.dev.js --inline --progress --port 8080",
+
+    "pretest": "npm run build",
+    "test": "karma start --config .config/karma.conf.js"
   },
   "author": "berwyn <berwyn.codeweaver@gmail.com>",
   "license": "MIT",
