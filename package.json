@@ -5,10 +5,11 @@
   "repository": "berwyn/pfm-ng2",
   "scripts": {
     "postinstall": "typings install",
-    "build": "rimraf dist && webpack --config .config/webpack.prod.js --progress --profile --bail",
+    "rebuild": "npm run clean && npm run build",
+    "build": "webpack --config .config/webpack.prod.js --progress --profile --bail",
 
     "lint": "tslint ./app/**/*.ts -t verbose",
-    "clean": "rimraf js.map app/**/*.js*",
+    "clean": "rimraf js.map app/**/*.js* dist",
     "update": "npm install && typings install",
     "start": "webpack-dev-server --config .config/webpack.dev.js --inline --progress --port 8080",
 

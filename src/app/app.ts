@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouteConfig, RouterOutlet, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 import { SidebarComponent } from './navigation/sidebar.component';
+
 import { HomePage } from './core/home.component';
 import { DiscoverPage } from './core/discover.component';
 import { AboutPage } from './core/about.component';

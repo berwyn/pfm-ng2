@@ -8,11 +8,11 @@ import { TrackStore } from './track.store';
 	selector: 'pfm-track-grid',
 	template: `
 		<div class="header">
-			<h3 class="title">{{ title }}</h3>
+			<h3 class="title qa-title">{{ title }}</h3>
 			<button role="button" *ngIf="tracks?.length > max">More</button>
 		</div>
-		<ul class="track-list">
-			<li class="list-item" *ngFor="let track of tracks">
+		<ul class="track-list qa-list">
+			<li class="list-item qa-item" *ngFor="let track of tracks">
 				<pfm-track-card [track]="track"></pfm-track-card>
 			</li>
 		</ul>

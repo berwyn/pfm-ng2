@@ -24,7 +24,7 @@ module.exports = function (config) {
 			noInfo: true
 		},
 
-		reporters: ['progress', 'nyan'],
+		reporters: ['nyan'],
 		port: 9876,
 		colors: true,
 		logLevel: config.LOG_INFO,
