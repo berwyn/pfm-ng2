@@ -7,7 +7,7 @@ import { NgFor } from '@angular/common';
 	template: `
 		<div class="pfm-sidebar">
 			<div class="pfm-logo">
-				<img class="pfm-logo-image" src="/images/logo-white.svg" alt="Pony.fm" />
+				<img class="pfm-logo-image" src="${require('../../images/logo-white.svg')}" alt="Pony.fm" />
 				<i class="material-icons pfm-menu">menu</i>
 			</div>
 			<nav role="nav" class="pfm-sidebar-nav">

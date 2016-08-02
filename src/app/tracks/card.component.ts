@@ -42,7 +42,7 @@ export class TrackCardComponent {
 		if(this.track.covers && this.track.covers.normal) {
 			return this.track.covers.normal;
 		} else {
-			return '/images/logo-white.svg';
+			return require('../../images/logo-white.svg');
 		}
 	}
 	
