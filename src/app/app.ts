@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { RouteConfig, RouterOutlet, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import { MD_SIDENAV_DIRECTIVES, MdSidenav } from '@angular2-material/sidenav';
 
 import { SidebarComponent } from './navigation/sidebar.component';
 
@@ -12,30 +13,15 @@ import { TrackStore } from './tracks/track.store';
 @Component({
 	selector: 'pfm-app',
 	template: `
-		<div class="pfm-app">
-			<pfm-sidebar></pfm-sidebar>
-			<div class="content-area">
-				<router-outlet></router-outlet>
-			</div>
-		</div>
+		<md-sidenav-layout>
+			<md-sidenav #start mode="side" [opened]="true">
+				<pfm-sidebar></pfm-sidebar>
+			</md-sidenav>
+			<router-outlet></router-outlet>
+		</md-sidenav-layout>
 	`,
-	styles: [
-		`.pfm-app {
-			display: flex;
-			flex-direction: row;
-		}
-		
-		.content-area {
-			margin-left: 285px;
-		}
-		
-		@media screen and (max-width: 900px) {
-			.content-area {
-				margin-left: 48px;
-			}
-		}`,
-	],
-	directives: [SidebarComponent, RouterOutlet],
+	styles: [require('./app.css')],
+	directives: [SidebarComponent, RouterOutlet, MD_SIDENAV_DIRECTIVES],
 	providers: [TrackStore, ROUTER_PROVIDERS]
 })
 @RouteConfig([
@@ -43,4 +29,8 @@ import { TrackStore } from './tracks/track.store';
 	{path: '/discover/...', name: 'Discover', 	component: DiscoverPage},
 	{path: '/about',		name: 'About',		component: AboutPage},
 ])
-export class AppComponent{}
+export class AppComponent {
+
+	@ViewChild('start') sideNav: MdSidenav;
+
+}

@@ -1,0 +1,67 @@
+:host {
+	display: flex;
+	flex-direction: column;
+}
+
+.pfm-sidebar {
+	background-color: #515151;
+	color: rgba(255,255,255,0.87);
+	height: 100vh;
+	width: 280px;
+}
+
+.pfm-logo {
+	background-color: #84528A;
+	text-align: center;
+}
+
+.pfm-menu {
+	display: none;
+	font-size: 32px;
+	height: 48px;
+	vertical-align: middle;
+	width: 48px;
+}
+
+.pfm-logo::before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	margin-left: -0.25em;
+	vertical-align: middle;
+}
+
+.pfm-logo-image {
+	display: inline-block;
+	padding: 2em 1em 3em;
+	vertical-align: middle;
+	width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+	.pfm-sidebar {
+		width: 48px;
+	}
+	
+	.pfm-logo {
+		height: 48px;
+		width: 48px;
+	}
+	
+	.pfm-logo-image {
+		display: none;
+	}
+	
+	.pfm-menu {
+		display: initial;
+	}
+	
+	.pfm-sidebar-navlist {
+		margin: 0;
+		padding: 0;
+	}
+	
+	.pfm-sidebar-navlist .nav-text {
+		display: none;
+	}
+}

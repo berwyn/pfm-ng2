@@ -1,0 +1,12 @@
+<div class="pfm-sidebar">
+	<div class="pfm-logo">
+		<img class="pfm-logo-image" src="../../images/logo-white.svg" alt="Pony.fm" />
+		<i class="material-icons pfm-menu">menu</i>
+	</div>
+	<md-nav-list>
+		<a md-list-item [routerLink]="[nav.routerLink]" *ngFor="let nav of navItems">
+			<md-icon md-list-avatar>{{ nav.icon }}</md-icon>
+			<h4 md-line>{{ nav.title }}</h4>
+		</a>
+	</md-nav-list>
+</div>

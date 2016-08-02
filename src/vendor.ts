@@ -6,5 +6,13 @@ import '@angular/common';
 import '@angular/http';
 import '@angular/router-deprecated';
 
+// Angular 2 Material
+import '@angular2-material/core';
+import '@angular2-material/card';
+import '@angular2-material/icon';
+import '@angular2-material/list';
+import '@angular2-material/sidenav';
+import '@angular2-material/grid-list';
+
 // RxJS
 import 'rxjs';
