@@ -1,0 +1,9 @@
+node_modules/
+app/**/*.js
+app/**/*.js.map
+.vscode/.browse*
+typings/
+.coverage/
+.config/system.config.js*
+dist/
+npm-debug.log
