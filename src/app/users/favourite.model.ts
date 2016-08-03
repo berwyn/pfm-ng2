@@ -1,7 +1,7 @@
 import { User } from './user.model';
-import { Track } from '../tracks/track.model';
-import { Album } from '../tracks/album.model';
-import { Playlist } from '../tracks/playlist.model';
+import { Track } from '../track/track.model';
+import { Album } from '../track/album.model';
+import { Playlist } from '../track/playlist.model';
 
 export class Favourite{
 	

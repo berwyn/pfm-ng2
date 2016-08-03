@@ -1,8 +1,10 @@
+import { Track, TrackFile } from './track.model';
+
 import { User, ResourceUser } from '../users/user.model';
 import { Favourite } from '../users/favourite.model';
-import { Image } from '../common/image.model';
-import { Track, TrackFile } from '../tracks//track.model';
 import { Comment } from '../users/comment.model';
+
+import { Image } from '../common/image.model';
 
 export class Album{
 	

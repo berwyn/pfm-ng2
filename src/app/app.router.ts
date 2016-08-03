@@ -11,8 +11,6 @@ const routes: RouterConfig = [
 	...DISCOVER_ROUTES,
 ];
 
-console.log(routes);
-
 export const APP_ROUTERS = [
 	provideRouter(routes),
 ];

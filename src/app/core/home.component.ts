@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 
-import { TrackGridComponent } from '../tracks/grid/grid.component';
+import { TrackGridComponent } from '../track/grid/grid.component';
 
 @Component({
 	template: require('./home.component.html'),
