@@ -1,0 +1,9 @@
+<md-card class="pfm-card">
+	<md-card-header>
+		<md-card-title>{{ track.title }}</md-card-title>
+		<md-card-subtitle>{{ track.user.name }}</md-card-subtitle>
+	</md-card-header>
+	<md-card-content>
+		<img [src]="loadArtwork()" [alt]="track.title" />
+	</md-card-content>
+</md-card>

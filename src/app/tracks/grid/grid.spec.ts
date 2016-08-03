@@ -16,10 +16,10 @@ import {
 import { Observable } from 'rxjs/Observable';
 import { Observer } from 'rxjs/Observer';
 
-import { TrackGridComponent as Component, Categories } from './grid.component';
-import { Track } from './track.model';
-import { TrackStore } from './track.store';
-import { EXPECTED_TRACKS } from './track.spec';
+import { TrackGridComponent as Component } from './grid.component';
+import { Track } from '../track.model';
+import { TrackStore } from '../track.store';
+import { EXPECTED_TRACKS } from '../track.spec';
 
 @Injectable()
 class MockTestStore extends TrackStore {
@@ -53,7 +53,7 @@ describe('Track Grid', () => {
 			let element = fixture.nativeElement as HTMLElement;
 
 			grid.title = 'Hot';
-			grid.category = Categories.Hot;
+			grid.category = 'hot';
 			grid.max = 10;
 			fixture.detectChanges();
 

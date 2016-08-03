@@ -9,9 +9,9 @@ import {
 import { TestComponentBuilder, ComponentFixture } from '@angular/compiler/testing';
 
 import { TrackCardComponent } from './card.component';
-import { Track } from './track.model';
-import { EXPECTED_TRACKS } from './track.spec';
-import { parseURI } from '../helpers/uri-helpers';
+import { Track } from '../track.model';
+import { EXPECTED_TRACKS } from '../track.spec';
+import { parseURI } from '../../helpers/uri-helpers';
 
 describe('Track Card', () => {
 

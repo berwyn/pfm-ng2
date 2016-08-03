@@ -1,0 +1,13 @@
+.header {
+	margin: 8px;
+}
+
+.track-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.track-list > .list-item {
+	margin: 8px;
+}

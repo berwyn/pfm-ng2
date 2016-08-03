@@ -1,0 +1,10 @@
+:host {
+	display: flex;
+	flex-direction: row;
+}
+
+@media screen and (max-width: 480px) {
+	:host {
+		flex-direction: column;
+	}
+}

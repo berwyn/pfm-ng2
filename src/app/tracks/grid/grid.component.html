@@ -1,0 +1,9 @@
+<div class="header">
+	<h3 class="title qa-title">{{ title }}</h3>
+	<button role="button" *ngIf="tracks?.length > max">More</button>
+</div>
+<md-grid-list [cols]="getColumnCount()" [gutterSize]="8">
+	<md-grid-tile *ngFor="let track of tracks" [style.background]="rebecca">
+		<pfm-track-card [track]="track"></pfm-track-card>
+	</md-grid-tile>
+</md-grid-list>

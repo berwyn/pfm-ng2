@@ -4,7 +4,7 @@
 		<i class="material-icons pfm-menu">menu</i>
 	</div>
 	<md-nav-list>
-		<a md-list-item [routerLink]="[nav.routerLink]" *ngFor="let nav of navItems">
+		<a md-list-item [routerLink]="nav.routerLink" *ngFor="let nav of navItems">
 			<md-icon md-list-avatar>{{ nav.icon }}</md-icon>
 			<h4 md-line>{{ nav.title }}</h4>
 		</a>
