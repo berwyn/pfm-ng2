@@ -18,7 +18,8 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.ts$/,
-				loader: 'ts'
+				loader: 'ts',
+				exclude: [/\.(spec|e2e)\.ts$/],
 			},
 			{
 				test: /\.html$/,

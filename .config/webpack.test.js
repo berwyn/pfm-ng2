@@ -22,8 +22,12 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				loader: 'null'
+				loader: 'raw'
 			}
 		]
-	}
+	},
+
+	devServer: {
+		quiet: true,
+	},
 }

@@ -43,14 +43,14 @@ describe('Track Card', () => {
 				card.track = noCover;
 				fixture.detectChanges();
 
-				expect(card['loadArtwork']()).toBe('/images/logo-white.svg');
+				expect(card['loadArtwork']()).toBe(require('../../../images/logo-white.svg'));
 			})
 		});
 	});
 
 	it('should render a track', (done: any) => {
 		tcb.createAsync(TrackCardComponent)
-			.then((fixture: ComponentFixture<TrackCardComponent>) => {
+			.then(fixture => {
 				const card = fixture.componentInstance as TrackCardComponent;
 				const element = fixture.nativeElement as HTMLElement;
 

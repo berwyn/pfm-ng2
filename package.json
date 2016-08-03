@@ -11,8 +11,8 @@
     "clean": "rimraf js.map app/**/*.js* dist",
     "update": "npm install && typings install",
     "start": "webpack-dev-server --config .config/webpack.dev.js --inline --progress --port 8080",
-    "pretest": "npm run build",
-    "test": "karma start --config .config/karma.conf.js"
+    "test": "karma start --single-run --config .config/karma.conf.js",
+    "test:w":"karma start --config .config/karma.conf.js"
   },
   "author": "berwyn <berwyn.codeweaver@gmail.com>",
   "license": "MIT",

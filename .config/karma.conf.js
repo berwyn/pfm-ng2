@@ -20,17 +20,12 @@ module.exports = function (config) {
 			stats: 'errors-only'
 		},
 
-		webpackServer: {
-			noInfo: true
-		},
-
 		reporters: ['nyan'],
 		port: 9876,
 		colors: true,
 		logLevel: config.LOG_INFO,
-		autoWatch: false,
+		autoWatch: true,
 		browsers: ['PhantomJS'],
-		singleRun: true
 	};
 
 	config.set(_config);
